@@ -7,7 +7,9 @@ I decided to add more factory-things to minecraft:
 - Generators: Produce electricity for burnable materials
 - Electric Furnace: Smelts items at the cost of electricity
 - Pipes: Allows you to pipe things around from machines / chests into machines/chests
-- Quarry: At the cost of electricity the quarry will mine all ores in a chunk
+- Quarry: At the cost of electricity the quarry will mine all ores in a chunk, once its done it displays a barrier particle above itself
+
+(The generator and furnace have an inventory which opens on right-click while the quarry will show you where it's currently mining at)
 
 ## Pipes
 
