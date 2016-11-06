@@ -13,6 +13,8 @@ I decided to add more factory-things to minecraft:
 
 ## Pipes
 
+(A video tutorial on pipes can be found [here](https://youtu.be/RcVNO-yUX6g): )
+
 By default, pipes only push items from their internal buffer in the direction that you were looking from when you placed them.
 (This means that if you place a pipe while looking down it will always try to push its contents upwards.)
 To make a pipe useful you will have to give pipes a diamond which allows them to extract items from inventories
