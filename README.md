@@ -1,6 +1,24 @@
 # Devathon Project
 This is the base layout for your Devathon Project. It includes several scripts to make running incredibly easy on Windows, Mac, and Linux.
 
+## Plugin overview
+
+I decided to add more factory-things to minecraft:
+
+(Electricity is bound to the player who placed the machine)
+
+- Generators: Produce electricity for burnable materials
+- Electric Furnace: Smelts items at the cost of electricity
+- Pipes: Allows you to pipe things around from machines / chests into machines/chests
+
+## Pipes
+
+By default, pipes only push items from their internal buffer in the direction that you were looking from when you placed them.
+(This means that if you place a pipe while looking down it will always try to push its contents upwards.)
+To make a pipe useful you will have to give pipes a diamond which allows them to extract items from inventories
+(Pipes only extract from the opposite face they've been placed from)
+Thus: You only need one diamond at the start of the pipe, no matter how long it will be
+
 ## Help
 
 Help will be available for 25 hours during the contest at the following sources:

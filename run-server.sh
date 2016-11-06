@@ -44,53 +44,11 @@ if [[ ! $(uname) == MING* ]]; then
 fi
 
 while true; do
-    if [ -f "build/apache-maven-3.2.5" ]; then
-    	./build/apache-maven-3.2.5/bin/mvn clean install # use the maven that spigot build tools downloaded
-    else
-        mvn clean install
-    fi
-    cp target/DevathonProject-1.0-SNAPSHOT.jar server/plugins/DevathonProject-1.0-SNAPSHOT.jar
+    mvn clean package
+    cp target/devathon-plugin-1.0-SNAPSHOT.jar server/plugins/DevathonProject-1.0-SNAPSHOT.jar
     cd server
-
-    if [[ $(uname) == MING* ]]; then
-        # we're running inside of git bash on windows, which doesn't support everything that unix systems do
-        # so just run the jar and ask the user if they want to continue running after it's done
-        java -jar spigot.jar
-
-        read -n 1 -p "Do you want to recompile and restart the server? (y/n) " value
-        if [ "$value" == "n" ]; then
-            echo "Shutting down process.."
-            exit
-        fi
-    else
-        # set up out process
-        rm -f /tmp/srv-input
-
-        mkfifo /tmp/srv-input
-        cat > /tmp/srv-input &
-        tail -f /tmp/srv-input | java -jar spigot.jar &
-
-        running=true
-        while $running; do
-            read input
-            if [ "$input" == "stop" ]; then
-                running=false
-                echo "stop" > /tmp/srv-input
-            elif [ "$input" == "exit" ]; then
-                running=false
-                echo "stop" > /tmp/srv-input
-                sleep 2
-                exit
-            else
-                echo "$input" > /tmp/srv-input
-            fi
-
-            sleep 1
-        done
-    fi
-
+    java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar spigot.jar
     cd ..
-
     echo "Rebuilding project.."
     sleep 1
 done

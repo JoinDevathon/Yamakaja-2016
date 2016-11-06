@@ -1,0 +1,59 @@
+{
+  "enabled": true,
+  "recipes": [
+    {
+      "machineType": "GENERATOR",
+      "shape": [
+        "XXX",
+        "XRX",
+        "XXX"
+      ],
+      "ingredients": [
+        {
+          "symbol": "X",
+          "materialType": "IRON_INGOT"
+        },
+        {
+          "symbol": "R",
+          "materialType": "FURNACE"
+        }
+      ]
+    },
+    {
+      "machineType": "ELECTRIC_FURNACE",
+      "shape": [
+        "XXX",
+        "XRX",
+        "XXX"
+      ],
+      "ingredients": [
+        {
+          "symbol": "X",
+          "materialType": "IRON_BLOCK"
+        },
+        {
+          "symbol": "R",
+          "materialType": "FURNACE"
+        }
+      ]
+    },
+    {
+      "machineType": "PIPE",
+      "shape": [
+        "XGX",
+        "GRG",
+        "XGX"
+      ],
+      "ingredients": [
+        {
+          "symbol": "G",
+          "materialType": "GOLD_INGOT"
+        },
+        {
+          "symbol": "R",
+          "materialType": "GLASS"
+        }
+      ]
+    }
+  ]
+}
