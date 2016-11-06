@@ -23,4 +23,4 @@ Thus: You only need one diamond at the start of the pipe, no matter how long it 
 
 ## Recipes
 
-Recipes can be found and modified in server/DevathonPlugin/machines.json
+Recipes can be found and modified in server/plugins/DevathonPlugin/machines.json
