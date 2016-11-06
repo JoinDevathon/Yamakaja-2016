@@ -54,6 +54,28 @@
           "materialType": "GLASS"
         }
       ]
+    },
+    {
+      "machineType": "QUARRY",
+      "shape": [
+        "XGX",
+        "GRG",
+        "XGX"
+      ],
+      "ingredients": [
+        {
+          "symbol": "G",
+          "materialType": "DIAMOND_PICKAXE"
+        },
+        {
+          "symbol": "R",
+          "materialType": "REDSTONE"
+        },
+        {
+          "symbol": "X",
+          "materialType": "IRON_INGOT"
+        }
+      ]
     }
   ]
 }

@@ -27,6 +27,8 @@ public class BurnValueRegistry {
                 return 100;
             case COAL_BLOCK:
                 return 900;
+            case LAVA_BUCKET:
+                return 900;
             default:
                 return 0;
         }
@@ -52,6 +54,8 @@ public class BurnValueRegistry {
                 return 200;
             case COAL_BLOCK:
                 return 1800;
+            case LAVA_BUCKET:
+                return 10000;
             default:
                 return 0;
         }

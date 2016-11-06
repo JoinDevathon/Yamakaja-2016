@@ -21,6 +21,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.world.WorldLoadEvent;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ShapedRecipe;
 
 import java.io.*;
@@ -176,7 +177,7 @@ public class MachineManager implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onInteract(PlayerInteractEvent e) {
-        if (e.getAction() != Action.RIGHT_CLICK_BLOCK || e.getPlayer().isSneaking())
+        if (e.getAction() != Action.RIGHT_CLICK_BLOCK || e.getPlayer().isSneaking() || e.getHand() == EquipmentSlot.OFF_HAND)
             return;
 
         Machine machine = getMachineAt(e.getClickedBlock().getLocation());

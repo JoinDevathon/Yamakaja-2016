@@ -11,7 +11,7 @@ public class TickLoop extends BukkitRunnable {
 
     public TickLoop(DevathonPlugin plugin) {
         this.plugin = plugin;
-        this.runTaskTimer(plugin, 0, 5);
+        this.runTaskTimer(plugin, 0, 1);
     }
 
     @Override

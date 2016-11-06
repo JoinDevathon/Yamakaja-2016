@@ -20,7 +20,9 @@ public enum MachineType {
             ChatColor.AQUA + "furnace, but a lot faster.", ChatColor.AQUA + "(At the cost of electricity)"),
             Material.IRON_BLOCK, MachineElectricFurnace.class),
     PIPE("Pipe", Arrays.asList(ChatColor.AQUA + "Transports items!", ChatColor.AQUA + "Give it a diamond to enable auto-extract"),
-            Material.GLASS, MachinePipe.class);
+            Material.GLASS, MachinePipe.class),
+    QUARRY("Quarry", Arrays.asList(ChatColor.AQUA + "Mines the chunk which it's placed", ChatColor.AQUA + "for resources and spits them out"),
+            Material.DIAMOND_BLOCK, MachineQuarry.class);
 
     private String name;
     private List<String> lore;
